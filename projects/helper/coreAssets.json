@@ -2929,5 +2929,10 @@
   },
   "pentagonchain": {
     "WPC": "0xAA3d9411DD08FDA149d4545089e241E62EE87860"
+  },
+  "gullychain": {
+    "WETH": "0x26aCCCb2e98ca9e067E58668Aa3B101beF432754",
+    "USDC_e": "0x65Ba03c6FA90Ed549f465D4c8f2e784D6eEB7E76",
+    "glUSD": "0xDBE84bE6496Fb3d07F601548555ec7Acc4CeBa8F"
   }
 }

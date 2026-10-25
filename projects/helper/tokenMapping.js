@@ -56,6 +56,14 @@ const fixBalancesTokens = {
   platon: {
     [ADDRESSES.null]: { coingeckoId: 'platon-network', decimals: 18 },
   },
+  // Gully Chain (Arbitrum Orbit L3, chain id 485590): ETH is the gas token; WETH9 and the bridged USDC (USDC.e) are not on
+  // CoinGecko because the chain is new, so they are priced through the canonical coins
+  gullychain: {
+    [ADDRESSES.null]: { coingeckoId: 'ethereum', decimals: 18 },
+    '0x26aCCCb2e98ca9e067E58668Aa3B101beF432754': { coingeckoId: 'ethereum', decimals: 18 }, // WETH9
+    '0x65Ba03c6FA90Ed549f465D4c8f2e784D6eEB7E76': { coingeckoId: 'usd-coin', decimals: 6 }, // USDC.e, backed 1:1 by USDC in the L1 USDC gateway
+    '0xDBE84bE6496Fb3d07F601548555ec7Acc4CeBa8F': { coingeckoId: 'usd-coin', decimals: 6 }, // glUSD, minted 1:1 against USDC.e by the PSM
+  },
 }
 
 ibcChains.forEach(chain => fixBalancesTokens[chain] = { ...ibcMappings, ...(fixBalancesTokens[chain] || {}) })
