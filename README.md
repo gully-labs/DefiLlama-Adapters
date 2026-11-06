@@ -84,8 +84,8 @@ The name of each rpc is `{CHAIN-NAME}_RPC`, and the name we use for each chain c
 <p align="center">
   <a href="https://gullylabs.xyz">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/powered-by-gully-labs-dark-2x.png">
-      <img alt="Powered by Gully Labs" src=".github/assets/powered-by-gully-labs-light-2x.png" width="254" height="64">
+      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/gully-labs-powered-by-dark.svg">
+      <img alt="Powered by Gully Labs" src=".github/assets/gully-labs-powered-by-light.svg" width="256" height="88">
     </picture>
   </a>
 </p>
