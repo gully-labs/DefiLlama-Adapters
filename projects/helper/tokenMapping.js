@@ -56,6 +56,12 @@ const fixBalancesTokens = {
   platon: {
     [ADDRESSES.null]: { coingeckoId: 'platon-network', decimals: 18 },
   },
+  // Gully Chain (Arbitrum Orbit L3 on Arbitrum One): ETH is the gas token.
+  // BEGIN GENERATED GULLYCHAIN TOKENS (tools/gullychain-config.mjs)
+  gullychain: {
+    [ADDRESSES.null]: { coingeckoId: 'ethereum', decimals: 18 },
+  },
+  // END GENERATED GULLYCHAIN TOKENS
 }
 
 ibcChains.forEach(chain => fixBalancesTokens[chain] = { ...ibcMappings, ...(fixBalancesTokens[chain] || {}) })
