@@ -42,6 +42,11 @@ const ibcMappings = {
 }
 
 const fixBalancesTokens = {
+  // Kinetiq Elysium (chain 99901, Arbitrum Orbit on HyperEVM): HYPE is the gas coin; WETH9-bytecode wrapped HYPE
+  kinetiq_elysium: {
+    [ADDRESSES.null]: { coingeckoId: 'hyperliquid', decimals: 18 },
+    '0xceeB06009b870430aC2872e3ba875aB6A9AB6699': { coingeckoId: 'hyperliquid', decimals: 18 },
+  },
   // OmniCoin L1 (chain 88008): USDC arrives as an ICTT ERC20TokenRemote minted
   // 1:1 against collateral on Avalanche; the coins service has no price for the
   // bridged address on this chain.
